@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "headline": "Scale Your Business with AI-Powered Digital Solutions",
+    "subheadline": "We help enterprise companies achieve 10x growth through cutting-edge digital marketing, AI automation, and premium web development.",
+    "primaryCTA": "Get Free Consultation",
+    "secondaryCTA": "View Case Studies",
+    "trustStrip": {
+      "logos": [
+        { "name": "TechCorp", "logo": "/logos/techcorp.svg" },
+        { "name": "InnovateCo", "logo": "/logos/innovate.svg" },
+        { "name": "GrowthLab", "logo": "/logos/growth.svg" }
+      ],
+      "stats": [
+        { "number": "500+", "label": "Projects Delivered" },
+        { "number": "98%", "label": "Client Satisfaction" },
+        { "number": "$50M+", "label": "Revenue Generated" }
+      ]
+    }
+  },
+  "services": [
+    {
+      "icon": "TrendingUp",
+      "title": "Performance Marketing",
+      "description": "Data-driven campaigns that deliver measurable ROI and scale your revenue exponentially."
+    },
+    {
+      "icon": "Bot",
+      "title": "AI Automation",
+      "description": "Custom AI solutions that streamline operations and reduce costs by up to 60%."
+    },
+    {
+      "icon": "Code",
+      "title": "Premium Web Development",
+      "description": "Enterprise-grade websites and applications built for performance and conversion."
+    },
+    {
+      "icon": "Search",
+      "title": "SEO & Content Strategy",
+      "description": "Dominate search rankings with content that converts visitors into customers."
+    },
+    {
+      "icon": "Smartphone",
+      "title": "Mobile-First Solutions",
+      "description": "Responsive experiences that engage users across all devices and platforms."
+    },
+    {
+      "icon": "BarChart3",
+      "title": "Analytics & Optimization",
+      "description": "Continuous improvement through advanced analytics and conversion optimization."
+    }
+  ],
+  "stats": [
+    { "number": 320, "suffix": "%", "label": "Average ROI Increase" },
+    { "number": 50, "suffix": "M+", "label": "Revenue Generated" },
+    { "number": 99, "suffix": "%", "label": "Client Retention Rate" },
+    { "number": 150, "suffix": "+", "label": "Enterprise Clients" }
+  ],
+  "caseStudies": [
+    {
+      "client": "TechVenture Inc",
+      "logo": "/case-studies/techventure.svg",
+      "outcome": "+420% Lead Generation",
+      "description": "Complete digital transformation resulting in 420% increase in qualified leads within 6 months.",
+      "metrics": { "leads": "420%", "revenue": "$2.4M", "timeline": "6 months" }
+    },
+    {
+      "client": "EcoSolutions Ltd",
+      "logo": "/case-studies/ecosolutions.svg",
+      "outcome": "+280% Revenue Growth",
+      "description": "AI-powered marketing automation delivered 280% revenue growth and 60% cost reduction.",
+      "metrics": { "revenue": "280%", "costs": "-60%", "timeline": "8 months" }
+    },
+    {
+      "client": "FinanceFlow Co",
+      "logo": "/case-studies/financeflow.svg",
+      "outcome": "+350% Conversion Rate",
+      "description": "Complete website redesign and conversion optimization resulted in 350% higher conversion rates.",
+      "metrics": { "conversion": "350%", "bounce": "-45%", "timeline": "4 months" }
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Sarah Chen",
+      "role": "VP of Marketing",
+      "company": "TechVenture Inc",
+      "avatar": "/testimonials/sarah.jpg",
+      "quote": "ZevStack transformed our entire digital presence. The results exceeded our wildest expectations - 420% increase in leads and our highest revenue quarter ever."
+    },
+    {
+      "name": "Michael Rodriguez",
+      "role": "CEO",
+      "company": "EcoSolutions Ltd",
+      "avatar": "/testimonials/michael.jpg",
+      "quote": "The AI automation solutions ZevStack built for us are game-changing. We've reduced operational costs by 60% while doubling our output."
+    },
+    {
+      "name": "Emily Johnson",
+      "role": "Director of Growth",
+      "company": "FinanceFlow Co",
+      "avatar": "/testimonials/emily.jpg",
+      "quote": "Working with ZevStack was the best business decision we made this year. Their strategic approach and execution are simply world-class."
+    }
+  ],
+  "modalSteps": {
+    "step1": {
+      "title": "What service interests you most?",
+      "options": [
+        { "id": "marketing", "label": "Performance Marketing", "description": "Scale revenue with data-driven campaigns" },
+        { "id": "ai", "label": "AI Automation", "description": "Streamline operations with custom AI" },
+        { "id": "development", "label": "Web Development", "description": "Premium websites that convert" },
+        { "id": "seo", "label": "SEO & Content", "description": "Dominate search rankings" },
+        { "id": "mobile", "label": "Mobile Solutions", "description": "Responsive, mobile-first experiences" },
+        { "id": "analytics", "label": "Analytics & Optimization", "description": "Data-driven growth strategies" }
+      ]
+    },
+    "step2": {
+      "title": "What's your project scope?",
+      "budgetRanges": [
+        { "id": "startup", "label": "$10K - $25K", "description": "Perfect for startups and small businesses" },
+        { "id": "growth", "label": "$25K - $50K", "description": "Ideal for growing companies" },
+        { "id": "scale", "label": "$50K - $100K", "description": "For scaling businesses" },
+        { "id": "enterprise", "label": "$100K+", "description": "Enterprise-level solutions" }
+      ],
+      "timelines": [
+        { "id": "urgent", "label": "ASAP", "description": "Need results immediately" },
+        { "id": "month", "label": "1-2 months", "description": "Standard timeline" },
+        { "id": "quarter", "label": "3-6 months", "description": "Strategic rollout" },
+        { "id": "flexible", "label": "Flexible", "description": "Quality over speed" }
+      ]
+    },
+    "step3": {
+      "title": "Let's connect and discuss your project",
+      "fields": [
+        { "name": "firstName", "label": "First Name", "type": "text", "required": true },
+        { "name": "lastName", "label": "Last Name", "type": "text", "required": true },
+        { "name": "email", "label": "Business Email", "type": "email", "required": true },
+        { "name": "phone", "label": "Phone Number", "type": "tel", "required": false },
+        { "name": "company", "label": "Company Name", "type": "text", "required": true },
+        { "name": "website", "label": "Website URL", "type": "url", "required": false }
+      ]
+    }
+  },
+  "finalCTA": {
+    "headline": "Ready to 10x Your Business Growth?",
+    "subheadline": "Join 150+ enterprise clients who trust ZevStack for their digital transformation.",
+    "scarcity": "⚡ Only 5 consultation slots available this month",
+    "cta": "Claim Your Free Strategy Session"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Get Growth Insights",
+      "description": "Weekly strategies from our experts",
+      "placeholder": "Enter your email"
+    },
+    "contact": {
+      "email": "hello@zevstack.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "San Francisco, CA"
+    },
+    "socials": [
+      { "platform": "LinkedIn", "url": "https://linkedin.com/company/zevstack" },
+      { "platform": "Twitter", "url": "https://twitter.com/zevstack" },
+      { "platform": "Instagram", "url": "https://instagram.com/zevstack" }
+    ]
+  }
+}
