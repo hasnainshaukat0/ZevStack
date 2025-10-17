@@ -21,7 +21,15 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="icon"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      onClick={() => {
+        // handle system mode too
+        if (theme === "system") {
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          setTheme(prefersDark ? "light" : "dark");
+        } else {
+          setTheme(theme === "dark" ? "light" : "dark");
+        }
+      }}
       className="h-10 w-10"
     >
       {theme === "light" ? (

@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { Sun, Moon, Menu, X } from 'lucide-react';
+import MegaMenu from './MegaMenu';
 
 export default function Header() {
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const [showMega, setShowMega] = useState(false);
+  const { theme, setTheme, systemTheme } = useTheme();
 
   // Prevent hydration mismatch
   useEffect(() => {
@@ -16,7 +18,9 @@ export default function Header() {
   }, []);
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    const isDark =
+      theme === 'dark' || (theme === 'system' && systemTheme === 'dark');
+    setTheme(isDark ? 'light' : 'dark');
   };
 
   const navLinks = [
@@ -32,7 +36,7 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-950/80">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-950/80 relative">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -42,15 +46,30 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-sm font-medium text-gray-600 transition-colors hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.name === 'Services' ? (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onMouseEnter={() => setShowMega(true)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setShowMega((v) => !v);
+                  }}
+                  className="text-sm font-medium text-gray-600 transition-colors hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm font-medium text-gray-600 transition-colors hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400"
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* Theme Toggle and Mobile Menu Button */}
@@ -60,7 +79,7 @@ export default function Header() {
               className="rounded-full p-2 text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? (
+              {theme === 'dark' || (theme === 'system' && systemTheme === 'dark') ? (
                 <Sun className="h-5 w-5" />
               ) : (
                 <Moon className="h-5 w-5" />
@@ -76,6 +95,13 @@ export default function Header() {
             </button>
           </div>
         </div>
+
+        {/* Mega Menu (desktop) */}
+        {showMega && (
+          <div className="hidden md:block">
+            <MegaMenu onClose={() => setShowMega(false)} />
+          </div>
+        )}
 
         {/* Mobile Navigation */}
         {isOpen && (
